@@ -1,11 +1,9 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/nate/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="ys"				# use Yad Smood theme
+ZSH_THEME="ys"			# use Yad Smood theme
 CASE_SENSITIVE="false"		# case-sensitive text completion
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="false"	# disable bi-weekly auto-update checks
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -35,11 +33,8 @@ CASE_SENSITIVE="false"		# case-sensitive text completion
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-# plugins=(git)
+# ZSH Plugins (found in ~/.oh-my-zsh/plugins/*)
+plugins=(git)
 
 # User configuration
 
@@ -48,39 +43,14 @@ export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/
 
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias subl="open -a Sublime\ Text"
-alias chro="open -a Google\ Chrome"
-
-# Git
-alias gs="git status"
-alias ga="git add"
-
-# POSTGRES
+# Personal Aliases
+## Git shortcuts are in zsh git plugin
+## Work 
+alias subl="open -a Sublime\ Text"	# open all files in cwd with sublime text
+alias venv="source venv/bin/activate"
+alias earth="cd /Users/meier/work/earthscape"
 alias startpostgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias stoppostgres="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
-alias gotowork='ssh -L 5000:churchill.earthscape.dev:5000 meier@192.168.11.198'
