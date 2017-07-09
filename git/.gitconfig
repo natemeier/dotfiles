@@ -1,3 +1,8 @@
 [user]
 	email = nate@natemeier.com
 	name = Nate Meier
+	signingkey = 7CF45C0D
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2
