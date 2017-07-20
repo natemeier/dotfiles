@@ -45,6 +45,9 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
+# look into what this actually does...
+export GPG_TTY=$(tty)
+
 # Personal Aliases
 ## Git shortcuts are in zsh git plugin
 ## Work 
