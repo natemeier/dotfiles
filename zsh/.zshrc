@@ -38,22 +38,22 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/texbin:/Applications/GMT5/GMT-5.1.0.app/Contents/Resources/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin"
+export PATH="/opt/local/bin:/opt/local/sbin:/usr/texbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
-
 # look into what this actually does...
 export GPG_TTY=$(tty)
 
+# pyenv stuff
+export PATH="/Users/nmeier/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 # Personal Aliases
-## Git shortcuts are in zsh git plugin
-## Work 
 alias subl="open -a Sublime\ Text"	# open all files in cwd with sublime text
 alias venv="source venv/bin/activate"
-alias earth="cd /Users/meier/work/earthscape"
 alias startpostgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias stoppostgres="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
