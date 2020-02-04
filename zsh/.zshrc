@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH="/Users/nathan.meier/.oh-my-zsh"
 
 ZSH_THEME="ys"			# use Yad Smood theme
 CASE_SENSITIVE="false"		# case-sensitive text completion
@@ -46,14 +46,8 @@ source $ZSH/oh-my-zsh.sh
 # look into what this actually does...
 export GPG_TTY=$(tty)
 
-# pyenv stuff
-export PATH="/Users/nmeier/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # Personal Aliases
 alias subl="open -a Sublime\ Text"	# open all files in cwd with sublime text
-alias venv="source venv/bin/activate"
 alias startpostgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias stoppostgres="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
