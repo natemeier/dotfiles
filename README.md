@@ -41,3 +41,4 @@ $ cd ~/path/to/dotfiles
 $ stow git -t ~
 $ stow vim -t ~
 ```
+
