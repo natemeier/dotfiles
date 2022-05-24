@@ -40,5 +40,4 @@ dotfiles to be in my home directory.
 $ cd ~/path/to/dotfiles
 $ stow git -t ~
 $ stow vim -t ~
-$ stow zsh -t ~
 ```
